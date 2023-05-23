@@ -1,0 +1,54 @@
+.color-chooser {
+    padding: 20px;
+  }
+  
+  .color-picker {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    padding: 20px;
+  }
+  
+  .hue-slider {
+    -webkit-appearance: none;
+    background: linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet);
+    height: 8px;
+    margin: 20px 0;
+  }
+  
+  .hue-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: gray;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .saturation-value {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .saturation,
+  .value {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .saturation {
+    background: linear-gradient(to right, transparent, white);
+  }
+  
+  .value {
+    background: linear-gradient(to bottom, transparent, black);
+  }
+  
