@@ -1,9 +1,26 @@
-const hueSlider = document.querySelector('.hue-slider');
-const saturation = document.querySelector('.saturation');
-const value = document.querySelector('.value');
+const contain = document.querySelector(".refresh-btn")
+const refreshBtn = document.querySelector(".refresh-btn")
+const maxCode = 3
 
-hueSlider.addEventListener('input', function() {
-  let hue = hueSlider.value;
-  saturation.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
-  value.style.backgroundColor = `hsl(${hue}, 50%, 50%)`;
-});
+// Generador de colores en Hex
+const generatePalette = () => {
+  for(let i = 0; i < maxCode; i++){
+    let randomHex = Math.floor(Math.random() * 0xffffff).toString(16)
+    randomHex = `#${randomHex.padStart(6, "0")}`
+    //console.log(randomHex) 
+    
+    const color = document.createElement("li")
+    color.classList.add("color")
+    color.innerHTML = `
+      <div class="marker" style="background: ${randomHex}">
+        <div class="cap"></div>
+        <div class="sleeve"></div>
+      </div>
+    `
+    contain.appendChild(color)
+  }
+}
+
+generatePalette();
+
+refreshBtn.addEventListener("click", generatePalette)
