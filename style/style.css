@@ -18,6 +18,7 @@ h1 {
   width: 200px;
   height: 25px;
   margin: 10px auto;
+  margin-bottom: 20px;
 }
 
 .cap {
@@ -44,24 +45,23 @@ h1 {
   box-shadow: 0 0 20px 0 rgba(83, 14, 14, 0.8);
 }
 
-.space {
-  margin-bottom: 20px;
-}
-
 .refresh-btn {
   position: fixed;
   left: 50%;
-  bottom: 40px;
   color: #fff;
   cursor: pointer;
   outline: none;
   font-weight: 500;
   font-size: 1.1rem;
   border-radius: 5px;
-  background: #8A6CFF;
+  background: whithe;
   padding: 13px 20px;
   border: 2px solid #fff;
   transform: translateX(-50%);
   box-shadow: 0 15px 30px rgba(52,87,220,0.2);
   transition: all 0.3s ease;
+}
+
+li {
+  list-style: none;
 }

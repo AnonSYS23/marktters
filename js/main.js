@@ -4,6 +4,7 @@ const maxCode = 3
 
 // Generador de colores en Hex
 const generatePalette = () => {
+  contain.innerHTML = ""
   for(let i = 0; i < maxCode; i++){
     let randomHex = Math.floor(Math.random() * 0xffffff).toString(16)
     randomHex = `#${randomHex.padStart(6, "0")}`
@@ -21,6 +22,6 @@ const generatePalette = () => {
   }
 }
 
-generatePalette();
+generatePalette()
 
 refreshBtn.addEventListener("click", generatePalette)
