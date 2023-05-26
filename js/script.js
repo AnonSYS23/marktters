@@ -13,7 +13,7 @@ const generatePalette = () => {
     const color = document.createElement("li")
     color.classList.add("color")
     color.innerHTML = `
-      <div class="marker" style="background: ${randomHex}">
+      <div class="marker" style="background: linear-gradient(#672809, ${randomHex})">
         <div class="cap"></div>
         <div class="sleeve"></div>
       </div>
